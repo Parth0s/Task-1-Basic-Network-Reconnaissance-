@@ -1,0 +1,46 @@
+## 🎯 **Commands Used in This Task**
+```bash
+# Basic network scan (used in this project)
+nmap -sS 192.168.1.0/24
+
+# Save results to file
+nmap -sS 192.168.1.0/24 -oN scan-results.txt
+nmap -sS 192.168.1.0/24 -oX scan-results.xml
+
+Discovery Scans:
+# Ping sweep - find live hosts
+nmap -sn 192.168.1.0/24
+
+# ARP scan for local network
+nmap -PR 192.168.1.0/24
+
+# Skip host discovery
+nmap -Pn 192.168.1.1
+
+Port Scanning Methods:
+# TCP SYN scan (stealth scan)
+nmap -sS target
+
+# TCP Connect scan
+nmap -sT target
+
+# UDP scan
+nmap -sU target
+
+# Comprehensive TCP + UDP
+nmap -sS -sU target
+
+Port Range Specification:
+# Scan specific ports
+nmap -p 22,80,443 target
+
+# Scan port range
+nmap -p 1-1000 target
+
+# Scan all 65535 ports
+nmap -p- target
+
+# Top 1000 ports (default)
+nmap target
+
+There are more commands of nmap that you can explore.
